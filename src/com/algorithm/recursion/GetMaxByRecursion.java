@@ -23,6 +23,5 @@ public class GetMaxByRecursion {
         int[] arr = ArrayUtil.randomArray(10, 20);
         ArrayUtil.traverseArray(arr);
         System.out.println( getMax(arr));
-
     }
 }
