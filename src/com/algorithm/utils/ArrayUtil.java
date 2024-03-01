@@ -1,4 +1,4 @@
-package com.algorithm.array_util;
+package com.algorithm.utils;
 
 /**
  * @author Fioriro

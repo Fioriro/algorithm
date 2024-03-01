@@ -1,8 +1,6 @@
 package com.algorithm.sort_algorithm.quick_sort;
 
-import com.algorithm.array_util.ArrayUtil;
-
-import java.util.Map;
+import com.algorithm.utils.ArrayUtil;
 
 /**
  * @author Fioriro
@@ -23,6 +21,7 @@ public class QuickSort {
 
     public static void quickSort(int[] arr, int L, int R){
         if(L < R){
+            //数组中随便一个数作为划分值，和数组最后一个数交换
             ArrayUtil.swap(arr, L + (int)(Math.random() * (R - L + 1)), R);
             int[] p = partition(arr, L, R);
             quickSort(arr, L, p[0] - 1);// < 区
@@ -36,6 +35,7 @@ public class QuickSort {
     public static int[] partition(int[] arr, int L, int R){
         int less = L - 1;//<区右边界
         int more = R;//>区左边界
+        //确定小于区，等于区，大于区
         while (L < more){//L表示当前数的位置 arr[R] -> 划分值
             if(arr[L] < arr[R]){//当前数 < 划分值
                 ArrayUtil.swap(arr, ++less, L++);
@@ -45,6 +45,7 @@ public class QuickSort {
                 L++;
             }
         }
+        //大于区左边界的数和R交换
         ArrayUtil.swap(arr, more, R);
         return new int[] {less + 1, more};
     }

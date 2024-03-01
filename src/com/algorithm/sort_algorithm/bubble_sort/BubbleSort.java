@@ -1,6 +1,6 @@
 package com.algorithm.sort_algorithm.bubble_sort;
 
-import com.algorithm.array_util.ArrayUtil;
+import com.algorithm.utils.ArrayUtil;
 
 public class BubbleSort {
 

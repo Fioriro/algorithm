@@ -1,6 +1,6 @@
 package com.algorithm.recursion;
 
-import com.algorithm.array_util.ArrayUtil;
+import com.algorithm.utils.ArrayUtil;
 
 public class GetMaxByRecursion {
 
