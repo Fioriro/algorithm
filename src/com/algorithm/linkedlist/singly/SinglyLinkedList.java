@@ -8,7 +8,7 @@ import java.util.function.IntFunction;
 
 public class SinglyLinkedList {
 
-    Node head;
+    public Node head;
 
     // Method to insert a new node to tail
     public static SinglyLinkedList insertTail(SinglyLinkedList list, int data) {
