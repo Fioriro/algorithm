@@ -80,6 +80,24 @@ public class DoublyLinkedList {
         }
     }
 
+    public static void reverse(DoublyLinkedList list){
+        if(list == null || list.head == null){
+            System.out.println("doubly linked list is empty!");
+            return;
+        }
+        Node cur = list.head;
+        Node prevNode = null;
+        while (cur != null){
+            Node nextNode = cur.next;
+            cur.next = prevNode;
+            cur.prev = nextNode;
+            prevNode = cur;
+            cur = nextNode;
+        }
+        list.tail = list.head;
+        list.head = prevNode;
+    }
+
     //method to traverse linked list from head
     public static void traverseHead(DoublyLinkedList list) {
         if (list.head == null) {
@@ -118,9 +136,12 @@ public class DoublyLinkedList {
             //insertHead(list, i);
             insertTail(list, i);
         }
-        deleteByValue(list, 1);
+        //deleteByValue(list, 1);
+        traverseHead(list);
+        reverse(list);
         traverseHead(list);
         traverseTail(list);
+        //traverseTail(list);
     }
 
 }
