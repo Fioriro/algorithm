@@ -63,7 +63,7 @@ public class PartitionLinkedList {
             st.next = eh;
             et = et == null ? st : et;//in the next step, which one connected to bh, which one is et
         }
-        if(et != null) {
+        if(et != null) { //at least one of less than partition or equal partition is not empty
             et.next = bh;
         }
         return sh != null ? sh : (eh != null ? eh : bh);
