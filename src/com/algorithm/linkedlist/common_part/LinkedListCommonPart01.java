@@ -42,6 +42,7 @@ public class LinkedListCommonPart01 {
 
     }
 
+    //the elements in both list is in ascending order
     static void printCommonPart(SinglyLinkedList list1, SinglyLinkedList list2){
         Node cur1 = list1.head;
         Node cur2 = list2.head;

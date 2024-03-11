@@ -16,10 +16,10 @@ public class BFS {
         root.right = right1;
         left1.left = left2;
 
-        w(root);
+        BFS(root);
     }
 
-    public static void w(Node root){
+    public static void BFS(Node root){
         if(root == null){
             return;
         }

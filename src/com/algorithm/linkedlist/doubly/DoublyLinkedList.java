@@ -7,7 +7,8 @@ import com.algorithm.utils.ArrayUtil;
 public class DoublyLinkedList {
 
     public Node head;
-    public Node tail;
+    public
+    Node tail;
 
     //method to insert a new node to head
     public static void insertHead(DoublyLinkedList list, int data){

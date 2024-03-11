@@ -8,7 +8,7 @@ import java.lang.reflect.Array;
 public class LinkedListCommonPart {
 
     public static void main(String[] args) {
-        // construct tow linked list
+        // construct two linked lists
         SinglyLinkedList list1 = new SinglyLinkedList();
         SinglyLinkedList list2 = new SinglyLinkedList();
 
