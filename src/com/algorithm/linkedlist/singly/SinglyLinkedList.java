@@ -101,6 +101,25 @@ public class SinglyLinkedList {
         list.head = prev;
     }
 
+    public static void createCircle(SinglyLinkedList list, int index) {
+        Node circleNode = null;
+        Node last = list.head;
+        int currentIndex = 0;
+
+        while (last.next != null) {
+            if (currentIndex == index) {
+                circleNode = last;
+            }
+            last = last.next;
+            currentIndex++;
+        }
+
+        // Create the circle
+        if (circleNode != null) {
+            last.next = circleNode;
+        }
+    }
+
     public static void main(String[] args) {
         int[] arr = {1,2,3,4,5,6,7,8,9,10};
         ArrayUtil.traverseArray(arr);

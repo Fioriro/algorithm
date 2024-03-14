@@ -13,6 +13,6 @@ public class Node {
 
     @Override
     public String toString() {
-        return "value = " + value + "next = " + next + "random = " + random;
+        return "value = " + value;
     }
 }

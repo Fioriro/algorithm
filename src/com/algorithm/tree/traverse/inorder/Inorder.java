@@ -2,6 +2,8 @@ package com.algorithm.tree.traverse.inorder;
 
 import com.algorithm.tree.Node;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class Inorder {
@@ -15,27 +17,26 @@ public class Inorder {
         root.right = right1;
         left1.left = left2;
 
-        inorder(root);
+        //inorder(root);
+        List<Integer> list = inorderTraversal(root);
+        System.out.println(list);
     }
 
-    static void inorder(Node root){
-        if(root == null){
-            System.out.println("tree is empty!");
-            return;
-        }
+    public static List<Integer> inorderTraversal(Node root) {
+        List<Integer> res = new ArrayList<>();
         Stack<Node> stack = new Stack<>();
-        stack.push(root);
-        Node cur = root;
-        while (cur.left != null){
-            stack.push(cur.left);
-            cur = cur.left;
-        }
-        while (!stack.isEmpty()){
-            Node temp = stack.pop();
-            System.out.print(temp.value + " ");
-            if(temp.right != null){
-                stack.push(temp.right);
+        Node curr = root;
+
+        while (curr != null || !stack.isEmpty()) {
+            while (curr != null) {
+                stack.push(curr);
+                curr = curr.left;
             }
+            curr = stack.pop();
+            res.add(curr.value);
+            curr = curr.right;
         }
+
+        return res;
     }
 }
