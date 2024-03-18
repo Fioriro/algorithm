@@ -2,11 +2,12 @@ package com.algorithm.utils;
 
 import com.algorithm.tree.Node;
 
+import java.util.Arrays;
 import java.util.LinkedList;
 import java.util.Queue;
 
 public class TreeUtil {
-    public static Node generateTree(String bfs) {
+    public static Node generateTreeBFS(String bfs) {
         String[] values = bfs.split(",");
         Queue<Node> queue = new LinkedList<>();
         Node root = new Node(Integer.parseInt(values[0]));
@@ -23,5 +24,22 @@ public class TreeUtil {
             }
         }
         return root;
+    }
+
+    public static Node generateTreePre(String preOrder) {
+        String[] values = preOrder.split(",");
+        Queue<String> queue = new LinkedList<>(Arrays.asList(values));
+        return generatePreOrder(queue);
+    }
+
+    private static Node generatePreOrder(Queue<String> queue) {
+        String value = queue.poll().trim();
+        if (value.equals("null")) {
+            return null;
+        }
+        Node node = new Node(Integer.parseInt(value));
+        node.left = generatePreOrder(queue);
+        node.right = generatePreOrder(queue);
+        return node;
     }
 }

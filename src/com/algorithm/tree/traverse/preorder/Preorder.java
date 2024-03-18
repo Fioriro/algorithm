@@ -18,7 +18,7 @@ public class Preorder {
         preorder(root);
     }
 
-    static void preorder(Node root){
+    public static void preorder(Node root){
         if(root == null){
             System.out.println("tree is empty!");
             return;

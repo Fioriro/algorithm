@@ -12,7 +12,7 @@ public class GetMaxWidth {
 
     public static void main(String[] args) {
         String bfs = "1,2,3,4,5,6,null,null,null,7,null,null,8";
-        Node root = TreeUtil.generateTree(bfs);
+        Node root = TreeUtil.generateTreeBFS(bfs);
         BFS.BFS(root);
         System.out.println();
         System.out.println("max width: " + getMaxWidth(root));
