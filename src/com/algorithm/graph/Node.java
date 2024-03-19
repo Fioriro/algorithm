@@ -15,4 +15,9 @@ public class Node {
         nexts = new ArrayList<>();
         edges = new ArrayList<>();
     }
+
+    @Override
+    public String toString() {
+        return "value = " + this.value;
+    }
 }
