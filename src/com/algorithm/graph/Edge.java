@@ -10,4 +10,9 @@ public class Edge {
         this.from = from;
         this.to = to;
     }
+
+    @Override
+    public String toString() {
+        return "(" + this.weight + ", " + this.from + ", " + this.to + ")";
+    }
 }

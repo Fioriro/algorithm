@@ -20,4 +20,12 @@ public class Node {
     public String toString() {
         return "value = " + this.value;
     }
+
+    public void setIn(int in){
+        this.in = in;
+    }
+
+    public void setOut(int out){
+        this.out = out;
+    }
 }
