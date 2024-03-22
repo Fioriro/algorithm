@@ -70,9 +70,7 @@ public class Kruskal {
                return o1.weight - o2.weight;
            }
        });
-        for (Edge edge : graph.edges) {
-            priorityQueue.add(edge);
-        }
+        priorityQueue.addAll(graph.edges);
         Set<Edge> result = new HashSet<>();
         while (!priorityQueue.isEmpty()){
             Edge edge = priorityQueue.poll();

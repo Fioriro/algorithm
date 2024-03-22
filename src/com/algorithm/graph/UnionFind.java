@@ -23,7 +23,7 @@ public class UnionFind {
 
     private Node find(Node node) {
         Node parent = parentMap.get(node);
-        if (node != parent) {
+        if (node != parent) { //the node is not the root of the set
             parent = find(parent);
         }
         parentMap.put(node, parent);
