@@ -61,6 +61,13 @@ public class Kruskal {
         }
     }
 
+    /**
+     * sort all the edges in ascending order by their weight and add them to the MST
+     * if they don't create a circle
+     * the determination of whether to create a circle is implemented using union-find
+     * @param graph
+     * @return
+     */
     public static Set<Edge> kruskal(Graph graph){
        UnionFind unionFind = new UnionFind();
        unionFind.makeSets(graph.nodes.values());

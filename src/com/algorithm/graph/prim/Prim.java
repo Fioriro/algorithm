@@ -83,6 +83,12 @@ public class Prim {
 
     }
 
+    /**
+     * add the minimum-weight edge that connects a node in the MST
+     * to a node outside the MST
+     * @param graph
+     * @return
+     */
     public static Set<Edge> prim(Graph graph){
         //store all the unlocked edge
         PriorityQueue<Edge> priorityQueue = new PriorityQueue<>(new Comparator<Edge>() {
@@ -96,7 +102,6 @@ public class Prim {
         HashSet<Node> set = new HashSet<>();
         //result set
         HashSet<Edge> result = new HashSet<>();
-
 
         for (Node node : graph.nodes.values()) {// select a random node
             if(!set.contains(node)){
