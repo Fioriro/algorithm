@@ -1,6 +1,5 @@
 package com.algorithm.sort_algorithm.merge_sort;
 
-import java.util.List;
 
 public class SmallSum01 {
     /**
