@@ -3,7 +3,6 @@ package com.algorithm.tree.successor;
 import com.algorithm.tree.Node;
 import com.algorithm.tree.traverse.inorder.Inorder;
 import com.algorithm.utils.TreeUtil;
-import com.sun.source.tree.Tree;
 
 import java.util.HashMap;
 import java.util.List;
